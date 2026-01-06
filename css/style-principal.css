@@ -1,0 +1,630 @@
+/* ========================================= */
+/* 1. CONFIGURACIÓN GENERAL Y RESET */
+/* ========================================= */
+:root {
+    /* Paleta Ejecutiva y de Alto Contraste (Azul/Amarillo/Blanco) */
+    --color-primary: #003366;      /* Azul Profundo/Marino (Confianza, Seriedad) */
+    --color-secondary: #FFC300;    /* Amarillo Dorado Opaco (Acento, Visibilidad) */
+    --color-background: #F8F9FA;   /* Fondo Ultra Claro (Blanco Elegante) */
+    --color-text-dark: #212529;    /* Negro/Gris Ejecutivo */
+    --color-text-light: #FFFFFF;
+    --color-border: #E0E0E0;
+
+    /* Tipografía Profesional (Montserrat) */
+    --font-primary: 'Montserrat', sans-serif;
+    
+    /* Sombra Limpia y Sutil */
+    --shadow-clean: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* ========================================= */
+/* 2. BARRA DE BÚSQUEDA SUPERIOR (TOP BAR) */
+/* ========================================= */
+.top-search-bar {
+    background-color: var(--color-text-dark); 
+    padding: 8px 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-form {
+    display: flex;
+    max-width: 300px;
+}
+
+.search-form input {
+    padding: 7px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    font-size: 0.85rem;
+    background-color: #3B4045;
+    color: var(--color-text-light);
+}
+
+.search-form input::placeholder {
+    color: #A0A0A0;
+}
+
+.search-form button {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-dark); 
+    border: none;
+    padding: 7px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #E6AE00; 
+}
+
+/* ========================================= */
+/* 3. CABECERA Y NAVEGACIÓN (HEADER) - CORREGIDO */
+/* ========================================= */
+.main-header {
+    /* MISMO COLOR QUE EL FOOTER */
+    background-color: var(--color-primary); 
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 35px;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: 800; 
+    color: var(--color-text-light); 
+    letter-spacing: -0.5px;
+}
+
+/* Navegación y Submenús */
+.main-nav > ul {
+    display: flex;
+    gap: 10px;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a {
+    color: var(--color-background); 
+    font-weight: 600;
+    padding: 10px 15px;
+    display: block;
+    border-bottom: 2px solid transparent; 
+    transition: all 0.2s ease-in-out;
+}
+
+.main-nav a:hover {
+    color: var(--color-secondary); 
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.main-nav .fa-chevron-down {
+    font-size: 0.7rem;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.dropdown:hover .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Estilo del Submenú con efecto moderno */
+.submenu {
+    opacity: 0; 
+    visibility: hidden; 
+    position: absolute;
+    top: 120%; 
+    left: 0;
+    min-width: 240px;
+    background-color: var(--color-text-light); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    padding: 10px 0;
+    z-index: 20;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.dropdown:hover > .submenu {
+    opacity: 1; 
+    visibility: visible;
+    transform: translateY(-20px); 
+}
+
+.submenu a {
+    padding: 12px 20px;
+    font-weight: 400;
+    color: var(--color-text-dark); 
+    border-bottom: none;
+}
+
+.submenu a:hover {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+/* Botón de Llamada a la Acción (CTA) */
+.cta-button {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-dark); 
+    padding: 10px 22px;
+    border-radius: 50px; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 195, 0, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #E6AE00;
+    box-shadow: 0 6px 15px rgba(255, 195, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ========================================= */
+/* 4. SECCIÓN HERO (3D) & 5. SECCIÓN DE INFORMACIÓN (GRID) */
+/* ========================================= */
+.hero-section {
+    position: relative;
+    height: 70vh; 
+    min-height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ... [Resto de estilos Hero] ... */
+#three-js-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-text-light);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    padding: 40px 60px;
+    max-width: 800px;
+    border-radius: 12px;
+}
+
+.hero-overlay h2 {
+    font-size: 3.5rem; 
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.primary-cta-button {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-dark); 
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 195, 0, 0.5);
+}
+
+.primary-cta-button:hover {
+    background-color: #E6AE00;
+    box-shadow: 0 10px 25px rgba(255, 195, 0, 0.7);
+}
+
+.info-grid-section {
+    padding: 80px 5%; 
+    text-align: center;
+    background-color: var(--color-text-light);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px; 
+    position: relative;
+    text-align: left; /* Asegura que el título se alinee a la izquierda */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secondary); 
+    margin: 10px 0 0; 
+    border-radius: 2px;
+}
+
+.card-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.feature-card {
+    background-color: var(--color-background);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-clean);
+    border: 1px solid var(--color-border);
+    flex: 1;
+    max-width: 320px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-secondary); 
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--color-secondary); 
+    margin-bottom: 20px;
+    display: block;
+}
+
+.feature-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+/* ========================================= */
+/* 6. SECCIÓN: COMUNICADOS PDF */
+/* ========================================= */
+.communication-section {
+    padding: 80px 5%;
+    background-color: var(--color-background);
+}
+
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 15px;
+}
+.section-header-row .section-title {
+    margin-bottom: 0;
+    text-align: left;
+}
+.section-header-row .section-title::after {
+    margin: 10px 0 0 0;
+}
+
+.repository-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.repository-link:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border-color: var(--color-primary);
+}
+
+.communicates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.comunicate-card {
+    background-color: var(--color-text-light);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid var(--color-secondary); 
+    transition: transform 0.3s ease;
+}
+
+.comunicate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.pdf-icon-wrapper i {
+    font-size: 2.5rem;
+    color: #CC0000; 
+}
+
+.pdf-icon-wrapper .date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #777;
+}
+
+.comunicate-card h4 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.comunicate-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    height: 40px; 
+    overflow: hidden;
+}
+
+.download-link {
+    display: inline-block;
+    color: var(--color-secondary); 
+    font-weight: 600;
+}
+
+.download-link:hover {
+    color: #E6AE00;
+    text-decoration: underline;
+}
+
+/* ========================================= */
+/* 7. SECCIÓN: GALERÍA DE VIDEOS */
+/* ========================================= */
+.video-gallery-section {
+    padding: 80px 5%;
+    background-color: var(--color-text-light);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.video-item {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-item iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    display: block;
+}
+
+.video-item p {
+    padding: 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+/* ========================================= */
+/* 8. PIE DE PÁGINA (FOOTER MODERNO) - CORREGIDO */
+/* ========================================= */
+.main-footer {
+    background-color: var(--color-primary); /* MISMO COLOR QUE EL HEADER */
+    color: var(--color-background);
+    padding-top: 60px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 50px;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--color-secondary); 
+    position: relative;
+}
+
+.footer-col h5::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-secondary); 
+    margin-top: 5px;
+    border-radius: 1.5px;
+}
+
+.footer-col ul a {
+    color: var(--color-background);
+    opacity: 0.9;
+    padding: 5px 0;
+}
+
+.footer-col ul a:hover {
+    color: var(--color-secondary); 
+}
+
+/* ... [Resto de estilos del footer] ... */
+
+.logo-col img {
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    color: var(--color-background);
+    font-size: 1.4rem;
+    margin-right: 20px;
+}
+
+.social-links a:hover {
+    color: var(--color-secondary); 
+    transform: scale(1.1);
+}
+
+.contact-col p {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.contact-col i {
+    margin-right: 12px;
+    color: var(--color-secondary); 
+}
+
+.copyright-bar {
+    background-color: #002244; 
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* ========================================= */
+/* Media Queries (Responsividad) */
+/* ========================================= */
+@media (max-width: 992px) {
+    .main-header {
+        flex-wrap: wrap;
+    }
+    .main-nav {
+        order: 3;
+        flex-basis: 100%;
+        margin-top: 15px;
+    }
+    .main-nav > ul {
+        justify-content: space-around;
+    }
+    .cta-button {
+        margin-left: auto;
+    }
+    .hero-overlay h2 {
+        font-size: 2.5rem;
+    }
+    .footer-grid {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .footer-col {
+        min-width: 40%;
+    }
+    .communicates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .video-item.hidden-mobile {
+        display: none; 
+    }
+}
+@media (max-width: 768px) {
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-grid {
+        flex-direction: column;
+    }
+    .hero-overlay h2 {
+        font-size: 2rem;
+    }
+    .hero-overlay p {
+        font-size: 1.1rem;
+    }
+    .communicates-grid, .video-grid {
+        grid-template-columns: 1fr; 
+    }
+    .section-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .repository-link {
+        margin-top: 15px;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
