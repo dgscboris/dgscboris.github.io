@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGSC - Dirección General de Sustancias Controladas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="img/logo-dgs-pagina.png"> 
+
+  
+</head>
+<body>
+
+   <div class="alert alert-danger text-center m-0 p-2 fixed-top-alert" role="alert">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i> 
+        **AVISO URGENTE:** Consulte el Decreto Supremo N° 5503 sobre la Sustancia DIESEL. <a href="decretos/DS-5503.pdf" class="alert-link fw-bold text-decoration-underline">Ver Detalles Aquí</a>
+    </div>
+    
+    <a href="https://wa.me/59163065218" class="whatsapp-btn shadow-lg" target="_blank" title="Denuncia Vía WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+        <span class="tooltip-text">Denuncias</span>
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg pt-5" id="mainNav">
+        <div class="container-fluid">
+
+                       
+            <a class="navbar-brand logo-3d" href="#">
+               <img src="img/logo-mingobb.png" alt="DGSC Logo" class="logo-img me-2">
+                <span class="logo-text">DGSC</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="tricolor-band sticky-top"></div>
+           
+           
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="mision.html">Misión y Visión</a></li>
+                            <li><a class="dropdown-item" href="estructura.html">Estructura Organizacional</a></li>
+                            <li><a class="dropdown-item" href="autoridades.html">Nuestras Autoridades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sustancias
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="tipos-sqc.html">Tipos de SQC</a></li>
+                            <li><a class="dropdown-item" href="lista-v-sqc.html">SQC Lista V</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Normativa
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="leyes.html">Leyes</a></li>
+                            <li><a class="dropdown-item" href="decretos-supremos.html">Decretos Supremos</a></li>
+                            <li><a class="dropdown-item" href="resoluciones-ministeriales.html">Resolucionews Ministeriales</a></li>
+                        </ul>
+                    </li>
+
+
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Formularios
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="formularios.html">Formularios</a></li>
+                         </ul>
+                    </li>
+
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trámites
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="tramites.html">Trámites</a></li>
+                            <li><a class="dropdown-item" href="costos-acl-hr.html">Costos ACL-HR</a></li>
+                            <li><a class="dropdown-item" href="seguimiento-tramite.html">Seguimiento Trámite</a></li>
+                            <li><a class="dropdown-item" href="guia-tramites.html">Guia de Trámites</a></li>
+                            <li><a class="dropdown-item" href="costo-tramites.html">Costo de Trámites</a></li>
+                        </ul>
+                    </li>
+
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Oficinas
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="distrital.html">Distrital</a></li>
+                            <li><a class="dropdown-item" href="regionales.html">Regionales</a></li>
+                            <li><a class="dropdown-item" href="horario-atencion.html">Horarios de Atencion</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!--<li class="nav-item"><a class="nav-link" href="#avisos">Avisos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estadisticas">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+   <!--<div class="tricolor-band sticky-top"></div>-->
+
+    <header class="hero-section text-white text-center d-flex align-items-center" id="inicio">
+        <div class="container">
+            <h1 class="display-2 fw-bold text-shadow-lg animate-fade-in-up">Dirección General de Sustancias Controladas</h1>
+            <p class="lead mb-4 animate-fade-in-up delay-1">Registro, Control y Fiscalización para la Seguridad Industrial y Nacional.</p>
+            <a href="#regulaciones" class="btn btn-primary btn-lg rounded-pill shadow-lg animate-fade-in-up delay-2">Ver Marco Legal <i class="bi bi-book"></i></a>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white" id="regulaciones">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Marco Legal</h2>
+            <div class="row g-4">
+                
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="card h-100 shadow-sm law-card uniform-card-base">
+                        <div class="card-accent-bar bg-primary"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Ley N° 913 (del 16 de marzo de 2017)</h4>
+                            <p class="card-text text-muted">Ley de Lucha Contra el Tráfico Ilícito de Sustancias Controladas.</p>
+                            <a href="ley/ley913.pdf" class="btn btn-outline-primary btn-sm mt-3">Ver Documento Completo <i class="bi bi-file-earmark-text-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 animate-on-scroll">
+                     <div class="card h-100 shadow-sm law-card uniform-card-base">
+                        <div class="card-accent-bar bg-secondary"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Decreto Supremo N° 4911 (12 de abril de 2023)</h4>
+                            <p class="card-text text-muted">Modifica y ajusta requisitos y procedimientos para mejorar la fluidez, celeridad y transparencia en los trámites administrativos de la DGSC, incluyendo la implementación del Sistema Estado Digital (ED-6) para la gestión de trámites.</p>
+                            <a href="decretos/DS-4911.pdf" class="btn btn-outline-secondary btn-sm mt-3">Ver Documento Completo <i class="bi bi-file-earmark-text-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 text-center mt-4 animate-on-scroll">
+                    <a href="#" class="btn btn-outline-dark btn-lg">Acceder al Archivo de Normativa Completa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!--<section class="py-5 bg-dark text-white" id="mision">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Misión y Visión</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0 animate-on-scroll">
+                    <div class="card bg-white mission-vision-card uniform-card-base text-dark border-0">
+                         <div class="card-accent-bar bg-primary"></div>
+                        <div class="card-body p-5">
+                            <h3 class="card-title mb-4 text-primary"><i class="bi bi-bullseye me-2"></i> Nuestra Misión</h3>
+                            <p class="card-text">Fiscalizar y registrar las sustancias químicas controladas, garantizando su **uso lícito**, minimizando los riesgos de desvío y promoviendo la **seguridad nacional** y la **transparencia**.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-on-scroll">
+                     <div class="card bg-white mission-vision-card uniform-card-base text-dark border-0">
+                         <div class="card-accent-bar bg-secondary"></div>
+                        <div class="card-body p-5">
+                            <h3 class="card-title mb-4 text-secondary"><i class="bi bi-eye me-2"></i> Nuestra Visión</h3>
+                            <p class="card-text">Ser la entidad líder y referente a nivel regional en el control de precursores, aplicando **tecnología de punta** y una **gestión proactiva** que asegure el cumplimiento normativo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+ <section class="py-5 bg-light" id="servicios">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Servicios Destacados</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                
+                <div class="col">
+                    <div class="card-container animate-on-scroll">
+                        <div class="card-flip shadow-lg"> 
+                            <div class="card-front p-4 d-flex flex-column justify-content-center"> 
+                                <!--<i class="bi bi-person-lines-fill display-4 mb-3 text-primary"></i>-->
+                                <img src="img/logo-ed6.png" alt="Icono ED-6" class="mb-3 mx-auto" style="width: 130px; height: auto;">
+                                <h5 class="card-title fw-bold text-primary">Sistema Estado Digital N° 6</h5>
+                                <p class="card-text text-muted">Plataforma informática central para la gestión de todos los trámites relacionados con el uso lícito de sustancias químicas controladas (SQC).</p>
+                                <span class="flip-hint">Haga clic para detalles</span>
+                            </div>
+                            <div class="card-back bg-white text-dark p-4 d-flex flex-column justify-content-center">
+                                <h5 class="card-title fw-bold text-primary">Objetivo</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Optimizar, dar celeridad, control y eficiencia en la atención de los trámites.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Digitalizar los procesos, eliminando la burocracia.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Unificar requisitos y procedimientos a nivel nacional, brindando mayor transparencia.</li>
+                                </ul>
+                                <a href="https://estadodigital.mingobierno.gob.bo/dgsc/" class="btn btn-outline-primary btn-sm mt-3">Iniciar Trámite</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card-container animate-on-scroll">
+                        <div class="card-flip shadow-lg">
+                            <div class="card-front p-4 d-flex flex-column justify-content-center">
+                                <!--<i class="bi bi-truck display-4 mb-3 text-secondary"></i>-->
+                                <img src="img/logo-aplicacion1.png" alt="Icono ED-6" class="mb-3 mx-auto" style="width: 130px; height: auto;">
+                                <h5 class="card-title fw-bold text-secondary">Aplicaciones Moviles</h5>
+                                <p class="card-text text-muted">Herramientas móviles para optimizar la transparencia y celeridad de los trámites, conforme a lo establecido en el Decreto Supremo N° 4911.</p>
+                                <span class="flip-hint">Haga clic para detalles</span>
+                            </div>
+                            <div class="card-back bg-white text-dark p-4 d-flex flex-column justify-content-center">
+                                <h5 class="card-title fw-bold text-secondary">Aplicación Móvi</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> DGSC-Token: Validar y autorizar los trámites que realiza en el Sistema ED-6.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> DGSC-HR: Registro y Monitoreo del Transporte de SQC.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> DGSC-QR: Validación de Documentos y Control.</li>
+                                </ul>
+                                <a href="aplicaciones-moviles.html" class="btn btn-outline-secondary btn-sm mt-3">Ver Aplicaciones Móviles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card-container animate-on-scroll">
+                        <div class="card-flip shadow-lg">
+                            <div class="card-front p-4 d-flex flex-column justify-content-center">
+                                <!--<i class="bi bi-fingerprint display-4 mb-3 text-info"></i>-->
+                                <img src="img/guia-de-tramites.png" alt="Icono laboratorio DGSC" class="mb-3 mx-auto" style="width: 130px; height: auto;">
+                                <h5 class="card-title fw-bold text-info">Guiade Tramites DGSC</h5>
+                                <p class="card-text text-muted">Manual técnico para orientar a personas naturales y jurídicas sobre los requisitos y pasos de todos los trámites ante la DGSC.</p>
+                                <span class="flip-hint">Haga clic para detalles</span>
+                            </div>
+                            <div class="card-back bg-white text-dark p-4 d-flex flex-column justify-content-center">
+                                <h5 class="card-title fw-bold text-info">Actividad Principal</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Análisis Químico: Realiza el análisis de muestras y/o ficha tecnica de sustancias químicas y productos terminados presentados.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success"></i> Emisión de Certificados: Emite el Certificado de Laboratorio o de Homologación.</li>
+                                </ul>
+                                <a href="documentos/guia-de-tramites.pdf" class="btn btn-outline-info btn-sm mt-3">Acceder</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  <!--  <section class="py-5 bg-white" id="faq">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Preguntas Frecuentes (FAQ)</h2>
+            <div class="accordion animate-on-scroll" id="faqAccordion">
+                
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué sustancias son consideradas "controladas" por la DGSC?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            La lista de sustancias controladas se define en el Anexo I de la Ley N° XXXX. Incluye precursores químicos clave utilizados en la industria, que deben ser monitoreados para evitar desvíos ilícitos. Puede descargar la lista completa en la sección de Regulaciones.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Cuánto tiempo tarda la emisión de una licencia de importación?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            El tiempo promedio es de 15 días hábiles, siempre y cuando toda la documentación esté completa y correcta. Le recomendamos revisar nuestra sección de Trámites para el checklist exacto.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Cómo puedo realizar una denuncia anónima?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Puede utilizar el botón de **Denuncia (WhatsApp)** flotante en la esquina inferior derecha o llamar a nuestra línea anónima 800-12345. Garantizamos absoluta confidencialidad.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="py-5 bg-light" id="avisos">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Avisos y Comunicados Oficiales</h2>
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card h-100 uniform-card-base announcement-card border-0">
+                        <div class="card-accent-bar bg-primary"></div>
+                        <div class="card-header bg-white text-dark fw-bold border-bottom">
+                            Comunicado DGSC-001/2025
+                        </div>
+
+                        <div class="text-center pt-3">
+                            <!--<a href="#" target="_blank">-->
+                                <img src="comunicado/com-des-nov2025.jpg" alt="Vista previa documento" class="img-fluid rounded border shadow-sm" style="width: 80%; height: auto; max-height: 250px; object-fit: cover; object-position: top;">
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Ampliacion para la declaracion de Reportes Mensuales</h5>
+                            <p class="card-text text-muted">Aviso sobre la amplioacion de reportes mensuales correspondiente al mes de Noviembre 2025.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top">
+                            <small class="text-muted">Publicado: 15 Dic 2025</small>
+                            <a href="comunicado/com-des-nov2025.pdf" target="_blank" class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-file-earmark-pdf-fill me-1"></i> Ver Documento
+                            </a>
+                        </div>
+                    </div>
+                </div>              
+                
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card h-100 uniform-card-base announcement-card border-0">
+                         <div class="card-accent-bar bg-secondary"></div>
+                        <div class="card-header bg-white text-dark fw-bold border-bottom">
+                            Comunicado Urgente DGSC-005/2025
+                        </div>
+
+                          <div class="text-center pt-3">
+                            <!--<a href="#" target="_blank">-->
+                                <img src="comunicado/com-dieseloil-18sep2025.jpg" alt="Vista previa documento" class="img-fluid rounded border shadow-sm" style="width: 80%; height: auto; max-height: 250px; object-fit: cover; object-position: top;">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-secondary">Manipulación de Combustibles Importados para Consumo Propio</h5>
+                            <p class="card-text text-muted">Los administrados deberan realizar el tramite correspondiente (inclusion de sustancia).</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top">
+                            <small class="text-muted">Publicado: 28 Nov 2025</small>
+                            <a href="comunicado/com-dieseloil-18sep2025.jpg" target="_blank" class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-file-earmark-pdf-fill me-1"></i> Ver Documento
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 animate-on-scroll">
+                    <div class="card h-100 uniform-card-base announcement-card border-0">
+                        <div class="card-accent-bar bg-info"></div>
+                        <div class="card-header bg-white text-dark fw-bold border-bottom">
+                            Convocatoria Púbica
+                        </div>
+
+                        <div class="text-center pt-3">
+                            <!--<a href="#" target="_blank">-->
+                                <img src="comunicado/com-dieseloil-18sep2025.jpg" alt="Vista previa documento" class="img-fluid rounded border shadow-sm" style="width: 80%; height: auto; max-height: 250px; object-fit: cover; object-position: top;">
+                            </a>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-info">Licitación para Plataforma de Servicios 2.0</h5>
+                            <p class="card-text text-muted">Invitación a empresas de software para presentar ofertas para la nueva plataforma digital.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top">
+                            <small class="text-muted">Publicado: 15 Nov 2025</small>
+                            <a href="documento_003.pdf" target="_blank" class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-file-earmark-pdf-fill me-1"></i> Ver Documento
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center mt-5 animate-on-scroll">
+                <a href="repositorio.html" class="btn btn-outline-dark btn-lg">Ver Archivo Completo de Avisos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white" id="estadisticas">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Métricas de Control y Fiscalización</h2>
+            <div class="row text-center">
+                
+                <div class="col-md-3 col-sm-6 mb-4 animate-on-scroll delay-1">
+                    <div class="statistic-box p-4 rounded bg-primary shadow-lg">
+                        <h3 class="display-3 fw-bold mb-0" data-target="98">6.825</h3>
+                        <p class="lead">Personas Naturales y/o Juridicas Registrados</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 mb-4 animate-on-scroll delay-2">
+                    <div class="statistic-box p-4 rounded bg-secondary shadow-lg">
+                        <h3 class="display-3 fw-bold mb-0" data-target="45000">98 %</h3>
+                        <p class="lead">Tramites Procesados por el Sistema ED-6</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 mb-4 animate-on-scroll delay-3">
+                    <div class="statistic-box p-4 rounded bg-info shadow-lg">
+                        <h3 class="display-3 fw-bold mb-0" data-target="12">42</h3>
+                        <p class="lead">SQC Sujetas a control y Fiscalización</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 mb-4 animate-on-scroll delay-4">
+                    <div class="statistic-box p-4 rounded bg-success shadow-lg">
+                        <h3 class="display-3 fw-bold mb-0" data-target="2">1.489</h3>
+                        <p class="lead">Autorizaciones Previas Emitidas</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4 small text-muted animate-on-scroll">Fuente: Reporte de Gestión Trimestral DGSC 2025.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light" id="videos">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Videos y Tutoriales Oficiales</h2>
+            <div class="row g-4">
+                
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="card h-100 uniform-card-base border-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/XYZ?rel=0" title="Video de Youtube" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Tutorial: Cómo realizar un trámite en línea</h5>
+                            <p class="card-text text-muted">Guía paso a paso para completar su solicitud de licencia digital en la nueva plataforma.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="card h-100 uniform-card-base border-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/ABC?rel=0" title="Video de Youtube" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Mensaje a la Nación de la Dirección General</h5>
+                            <p class="card-text text-muted">Conozca los logros y metas de la DGSC para el próximo periodo fiscal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 animate-on-scroll">
+                <a href="https://www.youtube.com/@DGSC" target="_blank" class="btn btn-outline-dark btn-lg"><i class="bi bi-youtube me-2"></i> Nuestro Canal Oficial</a>
+            </div>
+        </div>
+    </section>
+    
+   <!-- <section class="py-5 bg-light" id="contacto">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold animate-on-scroll">Contacto y Consultas Oficiales</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 animate-on-scroll">
+                    <p class="lead text-center mb-4">Utilice este formulario para consultas específicas sobre regulaciones, licencias o temas administrativos.</p>
+                    <div class="card uniform-card-base contact-card shadow-lg p-4">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label fw-bold">Nombre Completo / Razón Social</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Correo Electrónico Oficial</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="asunto" class="form-label fw-bold">Asunto (Trámite / Consulta Legal / Reporte)</label>
+                                <select class="form-select" id="asunto" required>
+                                    <option selected disabled value="">Seleccione el tipo de consulta</option>
+                                    <option>Consulta sobre Licencias</option>
+                                    <option>Reporte de Incidencias</option>
+                                    <option>Solicitud de Información Legal</option>
+                                    <option>Otras Consultas</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label fw-bold">Mensaje Detallado</label>
+                                <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 mt-3">Enviar Consulta <i class="bi bi-send-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold text-primary">DGSC</h5>
+                    <p>Dirección General de Sustancias Controladas.</p>
+                    <p class="small text-muted">Comprometidos con el desarrollo y la calidad de vida de nuestros ciudadanos.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#regulaciones" class="text-white text-decoration-none">Marco Legal</a></li>
+                        <li><a href="#faq" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Mapa del Sitio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contáctenos</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Av. Control #5678, Edificio DGSC</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +591 123 4567</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> fiscalizacion@dgsc.gob</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2025 DGSC. Todos los derechos reservados. | Desarrollado con Bootstrap 5.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

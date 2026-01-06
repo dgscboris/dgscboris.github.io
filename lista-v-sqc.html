@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGSC - Dirección General de Sustancias Controladas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="img/logo-dgs-pagina.png"> 
+
+       
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+      
+    <!-- Íconos institucionales -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+
+
+ <link rel="stylesheet" href="/style.css"> 
+
+
+
+ <style>
+
+
+:root {
+    /* Paleta Ejecutiva y de Alto Contraste (Azul/Amarillo/Blanco) */
+    --color-primary: lab(21.31% 6.82 -34.22);      /* Azul Profundo/Marino (Confianza, Seriedad) */
+    --color-secondary: #FFC300;    /* Amarillo Dorado Opaco (Acento, Visibilidad) */
+    --color-background: #F8F9FA;   /* Fondo Ultra Claro (Blanco Elegante) */
+    --color-text-dark: #212529;    /* Negro/Gris Ejecutivo */
+    --color-text-light: #FFFFFF;
+    --color-border: #E0E0E0;
+
+    /* Tipografía Profesional (Montserrat) */
+    --font-primary: 'Montserrat', sans-serif;
+    
+    /* Sombra Limpia y Sutil */
+    --shadow-clean: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+
+       /* El CSS para stats-section se ha movido a style.css */
+        
+       /* Estilo para la barra de navegación (Header) - COLOR PLOMO CLARO */
+       .main-header {
+           background-color: #f0f0f0; /* Plomo claro */
+       }
+        
+       /* Nuevo estilo para la línea tricolor */
+       .flag-line {
+           display: flex; /* Para que los colores se pongan uno al lado del otro */
+           height: 10px; /* ¡ALTURA DUPLICADA A 10PX! */
+           width: 100%; /* Cubre todo el ancho */
+           margin-top: -1px; /* Ajuste opcional para pegarlo al header si es necesario */
+       }
+
+       .flag-line > div {
+           height: 100%;
+           width: 33.333%; /* Cada color ocupa un tercio */
+       }
+
+       .flag-line .red {
+           background-color: #D42031; /* Rojo de la bandera de Bolivia */
+       }
+
+       .flag-line .yellow {
+           background-color: #F8E300; /* Amarillo de la bandera de Bolivia */
+       }
+
+       .flag-line .green {
+           background-color: #007934; /* Verde de la bandera de Bolivia */
+       }
+
+
+        /* Estilo General del Contenedor de la Página */
+        .page-container {
+            padding: 40px 5%;
+        }
+
+        /* Título y Subtítulo de la Página */
+        .page-header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 20px;
+        }
+
+        .page-header h2 {
+            font-size: 2.8rem;
+            color: var(--color-primary);
+            font-weight: 800;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* ------------------------------------------ */
+        /* Estilos de las Tablas de Sustancias */
+        /* ------------------------------------------ */
+        .substance-section {
+            margin-bottom: 50px;
+            background-color: var(--color-text-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+        
+        .substance-section h3 {
+            font-size: 2rem;
+            color: var(--color-secondary);
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .substance-section h3 i {
+            margin-right: 15px;
+            color: var(--color-primary);
+        }
+
+        .substance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .substance-table th, .substance-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #EEE;
+            font-size: 0.95rem;
+            
+        }
+
+        .substance-table th {
+            background-color: var(--color-primary-dark);
+            color: var(--color-text-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid var(--color-secondary);
+            color: rgb(235, 195, 17);
+        }
+
+        .substance-table tr:nth-child(even) {
+            background-color: #F9F9F9;
+        }
+
+        .substance-table td:first-child {
+            font-weight: 700;
+            color: var(--color-primary);
+            white-space: nowrap; /* Evitar que el código de nomenclatura se rompa */
+        }
+        
+        /* Estilo para las Celdas Arancelarias */
+        .substance-table td:nth-child(3), .substance-table td:nth-child(4) {
+             font-family: 'Courier New', Courier, monospace;
+             font-size: 0.9rem;
+             color: #6A6A6A;
+        }
+        
+        /* Estilos específicos para notas */
+        .note-box {
+            background-color: #E6F0FF;
+            border-left: 5px solid var(--color-primary);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+        
+        .note-box strong {
+            color: var(--color-primary);
+        }
+        
+        /* Media Query para tablas en móvil */
+        @media (max-width: 900px) {
+            .substance-table, .substance-table tbody, .substance-table tr, .substance-table td {
+                display: block;
+                width: 100%;
+            }
+            .substance-table thead {
+                display: none;
+            }
+            .substance-table tr {
+                margin-bottom: 15px;
+                border: 1px solid #DDD;
+                border-radius: 8px;
+            }
+            .substance-table td {
+                border-bottom: 1px solid #EEE;
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            .substance-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: calc(50% - 20px);
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 600;
+                color: var(--color-primary-dark);
+            }
+        }
+    </style>
+
+
+
+
+    
+</head>
+<body>
+
+    <div class="alert alert-danger text-center m-0 p-2 fixed-top-alert" role="alert">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i> 
+        **ALERTA URGENTE:** Consulte la Resolución DGSC-002/2025 sobre el manejo y transporte de precursores. <a href="#" class="alert-link fw-bold text-decoration-underline">Ver Detalles Aquí</a>
+    </div>
+
+    <a href="https://wa.me/59163065218" class="whatsapp-btn shadow-lg" target="_blank" title="Denuncia Vía WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+        <span class="tooltip-text">Denuncia (Whatsapp)</span>
+    </a>
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg pt-5" id="mainNav">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand logo-3d" href="#">
+               <img src="img/logo-mingobb.png" alt="DGSC Logo" class="logo-img me-2">
+                <span class="logo-text">DGSC</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="mision.html">Misión y Visión</a></li>
+                            <li><a class="dropdown-item" href="estructura.html">Estructura Organizacional</a></li>
+                            <li><a class="dropdown-item" href="autoridades.html">Nuestras Autoridades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sustancias
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="tipos-sqc.html">Tipos de SQC</a></li>
+                            <li><a class="dropdown-item" href="lista-v-sqc.html">SQC Lista V</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Normativa
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="leyes.html">Leyes</a></li>
+                            <li><a class="dropdown-item" href="decretos-supremos.html">Decretos Supremos</a></li>
+                            <li><a class="dropdown-item" href="resoluciones-ministeriales.html">Resolucionews Ministeriales</a></li>
+                        </ul>
+                    </li>
+
+
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Formularios
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="formularios.html">Formularios</a></li>
+                         </ul>
+                    </li>
+
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trámites
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="tramites.html">Trámites</a></li>
+                            <li><a class="dropdown-item" href="costos-acl-hr.html">Costos ACL-HR</a></li>
+                            <li><a class="dropdown-item" href="seguimiento-tramite.html">Seguimiento Trámite</a></li>
+                            <li><a class="dropdown-item" href="guia-tramites.html">Guia de Trámites</a></li>
+                            <li><a class="dropdown-item" href="costo-tramites.html">Costo de Trámites</a></li>
+                        </ul>
+                    </li>
+
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Oficinas
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownNosotros">
+                            <li><a class="dropdown-item" href="distrital.html">Distrital</a></li>
+                            <li><a class="dropdown-item" href="regionales.html">Regionales</a></li>
+                            <li><a class="dropdown-item" href="horario-atencion.html">Horarios de Atencion</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!--<li class="nav-item"><a class="nav-link" href="#avisos">Avisos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estadisticas">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="tricolor-band sticky-top"></div>
+</head>
+
+
+
+<main class="main-content">
+        <section class="page-container">
+            <div class="page-header">
+                <h2><i class="fas fa-vial"></i> Sustancias Químicas Controladas (Lista V)</h2>
+                <p>Sustancias Químicas Controladas Incertas de la Lista V del Anexo de la Ley 913.</p>
+                <div class="note-box">
+                    Acidos - Bases - Oxidantes - Solventes y Diluyentes -Productos Terminados.
+                </div>
+            </div>
+
+            <div class="substance-section">
+                <h3><i class="fas fa-flask"></i> 1) ÁCIDOS</h3>
+                <table class="substance-table">
+                    <thead>
+                        <tr>
+                            <th>Nomenclatura</th>
+                            <th>Sinónimos</th>
+                            <th>NABANDINA (N.C.C.A.B.)</th>
+                            <th>NANDINA (S.A.D.C.M.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nomenclatura">1.1. Ácido Sulfúrico</td>
+                            <td data-label="Sinónimos">ACEITE DE VITRIOLO, OLEUM, SULFATO DE HIDROGENO, ACIDO DE BATERIA</td>
+                            <td data-label="NABANDINA">28.08.01.00</td>
+                            <td data-label="NANDINA">2807.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">1.2. Ácido Clorhídrico</td>
+                            <td data-label="Sinónimos">CLORURO DE HIDROGENO EN SOLUCION ACUOSA, ACIDO MURIATICO</td>
+                            <td data-label="NABANDINA">28.06.01.00</td>
+                            <td data-label="NANDINA">2806.10.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">1.3. Ácido Acético (Acido Etanoico)</td>
+                            <td data-label="Sinónimos">ACIDO ETANOICO, ACIDO DEL VINAGRE, ACIDO METANO CARBOXILICO</td>
+                            <td data-label="NABANDINA">29.14.02.02</td>
+                            <td data-label="NANDINA">2915.21.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">1.4. Anhídrido Acético (Óxido Acético)</td>
+                            <td data-label="Sinónimos">OXIDO ACETICO, OXIDO DE ACETILO, ANHIDRIDO DEL ACIDO ACETICO, ANHIDRIDO ETANOICO</td>
+                            <td data-label="NABANDINA">29.14.02.05</td>
+                            <td data-label="NANDINA">2915.24.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">1.5. Ácido Benzoico (Acido Bencenocarboxílico)</td>
+                            <td data-label="Sinónimos">ACIDO BENCENOCARBOXILICO, CARBOXIBENCENO, ACIDO FENILFORMICO</td>
+                            <td data-label="NABANDINA">29.14.13.01</td>
+                            <td data-label="NANDINA">2916.31.10</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">1.6. Cloruro de Acetilo</td>
+                            <td data-label="Sinónimos">CLORURO DE ETANOILO, CLORURO ACETICO</td>
+                            <td data-label="NABANDINA">29.14.02.71</td>
+                            <td data-label="NANDINA">2915.90.10</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">1.7. Cloruro de Benzoilo</td>
+                            <td data-label="Sinónimos">CLORURO DE FENIL CARBONILO</td>
+                            <td data-label="NABANDINA">29.14.13.99</td>
+                            <td data-label="NANDINA">2916.32.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">1.8. Soluciones acuosas (mayor al 15%)</td>
+                            <td data-label="Sinónimos">Soluciones acuosas que contengan uno ó más de los productos nombrados en el numeral (1) en una proporción mayor al 15%.</td>
+                            <td data-label="NABANDINA">N/A</td>
+                            <td data-label="NANDINA">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="substance-section">
+                <h3><i class="fas fa-burn"></i> 2) BASES</h3>
+                <table class="substance-table">
+                    <thead>
+                        <tr>
+                            <th>Nomenclatura</th>
+                            <th>Sinónimos</th>
+                            <th>NABANDINA (N.C.C.A.B.)</th>
+                            <th>NANDINA (S.A.D.C.M.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nomenclatura">2.1. Hidróxido de Sodio (Soda Cáustica)</td>
+                            <td data-label="Sinónimos">SODA CAUSTICA, SOSA CAUSTICA, HIDRATO DE SODIO, LEJIA DE SOSA</td>
+                            <td data-label="NABANDINA">28.17.01.00</td>
+                            <td data-label="NANDINA">2815.11.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.2. Hidróxido de Potasio (Potasa Cáustica)</td>
+                            <td data-label="Sinónimos">POTASA CAUSTICA, HIDRATO DE POTASIO, LEJIA</td>
+                            <td data-label="NABANDINA">28.17.02.00</td>
+                            <td data-label="NANDINA">2815.20.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.3. Hidróxido de Calcio (Cal, Cal Apagada)</td>
+                            <td data-label="Sinónimos">DIHIDROXIDO DE CALCIO, HIDRATO DE CAL, CAL HIDRATADA</td>
+                            <td data-label="NABANDINA">28.28.02.99</td>
+                            <td data-label="NANDINA">2825.90.90.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.4. Hidróxido de Amonio (Amoniaco Acuoso)</td>
+                            <td data-label="Sinónimos">AMONIACO ACUOSO, AGUA AMONIACAL, HIDRATO AMONIACO</td>
+                            <td data-label="NABANDINA">28.16.00.02</td>
+                            <td data-label="NANDINA">2814.20.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.5. Carbonato de Sodio (Sosa, Ceniza de Sosa)</td>
+                            <td data-label="Sinónimos">CARBONATO DE DISODIO, CARBONATO NEUTRO DE SODIO, SODA SOLVAY, CENIZA DE SODA</td>
+                            <td data-label="NABANDINA">28.42.01.00</td>
+                            <td data-label="NANDINA">2836.20.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.6. Carbonato de Potasio (Potasa)</td>
+                            <td data-label="Sinónimos">CARBONATO NEUTRO DE POTASIO, POTASA, CENIZAS DE PERLA, SAL TARTARA</td>
+                            <td data-label="NABANDINA">28.42.02.11</td>
+                            <td data-label="NANDINA">2836.40.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.7. Carbonato de Calcio (Caliza)</td>
+                            <td data-label="Sinónimos">CARBONATO CALCICO, CALCITA</td>
+                            <td data-label="NABANDINA">28.42.02.31</td>
+                            <td data-label="NANDINA">2836.50.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.8. Bicarbonato de Sodio</td>
+                            <td data-label="Sinónimos">HIDROGENO CARBONATO DE SODIO, CARBONATO DE ACIDO DE SODIO, SOSA DE COCER</td>
+                            <td data-label="NABANDINA">28.02.01.11</td>
+                            <td data-label="NANDINA">2836.30.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.9. Amoniaco Anhídrico (Amoniaco Gas Licuado)</td>
+                            <td data-label="Sinónimos">AMONIACO GAS LICUADO</td>
+                            <td data-label="NABANDINA">28.16.00.01</td>
+                            <td data-label="NANDINA">2814.10.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.10. Óxido de Calcio (Cal, Cal Viva)</td>
+                            <td data-label="Sinónimos">OXIDO CALCICO, CAL ELECTROFUNDIDA, CAL VIVA, CAL QUEMADA, CAL FUNDENTE</td>
+                            <td data-label="NABANDINA">28.26.02.99</td>
+                            <td data-label="NANDINA">2825.90.90.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">2.11. Soluciones acuosas (mayor al 10%)</td>
+                            <td data-label="Sinónimos">Soluciones acuosas que contengan uno ó más de los productos nombrados en el numeral (2) en una proporción mayor al 10%.</td>
+                            <td data-label="NABANDINA">N/A</td>
+                            <td data-label="NANDINA">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="substance-section">
+                <h3><i class="fas fa-bong"></i> 3) OXIDANTES</h3>
+                <table class="substance-table">
+                    <thead>
+                        <tr>
+                            <th>Nomenclatura</th>
+                            <th>Sinónimos</th>
+                            <th>NABANDINA (N.C.C.A.B.)</th>
+                            <th>NANDINA (S.A.D.C.M.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nomenclatura">3.1. Permanganato de Potasio</td>
+                            <td data-label="Sinónimos">PERMANGANATO POTASICO, SAL DE POTASIO DEL ACIDO PERMANGANICO</td>
+                            <td data-label="NABANDINA">28.47.03.01</td>
+                            <td data-label="NANDINA">2841.60.10.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">3.2. Hipoclorito de Sodio (Lavandina)</td>
+                            <td data-label="Sinónimos">MONOXOCLORATO DE SODIO, LAVANDINA, AGUA DE JAVEL</td>
+                            <td data-label="NABANDINA">28.31.02.01</td>
+                            <td data-label="NANDINA">2828.90.10.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">3.3. Soluciones acuosas (mayor al 10%)</td>
+                            <td data-label="Sinónimos">Soluciones acuosas que contengan uno ó más de los productos nombrados en el numeral (3) en una proporción mayor al 10%.</td>
+                            <td data-label="NABANDINA">N/A</td>
+                            <td data-label="NANDINA">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="substance-section">
+                <h3><i class="fas fa-tint"></i> 4) SOLVENTES Y DILUYENTES (Materias Primas)</h3>
+                <table class="substance-table">
+                    <thead>
+                        <tr>
+                            <th>Nomenclatura</th>
+                            <th>Sinónimos</th>
+                            <th>NABANDINA (N.C.C.A.B.)</th>
+                            <th>NANDINA (S.A.D.C.M.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="Nomenclatura">4.1. Kerosene</td><td data-label="Sinónimos">KEROSEN, KEROSENO, KEROSINO, PETROLEO LEMPANTE</td><td data-label="NABANDINA">27.10.11.00</td><td data-label="NANDINA">2710.00.41.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.2. Gasolina</td><td data-label="Sinónimos">N/A</td><td data-label="NABANDINA">27.10.01.99</td><td data-label="NANDINA">2710.00.60.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.3. Diesel (Diesel Oíl)</td><td data-label="Sinónimos">DIESEL OIL, FUEL OIL</td><td data-label="NABANDINA">27.09.00.00</td><td data-label="NANDINA">2710.00.60.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.4. Éter de Petróleo (Bencina de Petróleo)</td><td data-label="Sinónimos">ESPIRITU DE PETROLEO, BENCINA DE PETROLEO, NAFTA</td><td data-label="NABANDINA">27.10.09.99</td><td data-label="NANDINA">2710.00.30.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.5. Aguarrás (Esencia de Trementina)</td><td data-label="Sinónimos">ESENCIA DE TREMENTINA, ACEITE DE TREMENTINA</td><td data-label="NABANDINA">38.07.01.00</td><td data-label="NANDINA">3805.10.10.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.6. Acetona (2 - Propanona)</td><td data-label="Sinónimos">2-PROPANONA, DIMETIL CETONA, BETA CETOPROPANONA</td><td data-label="NABANDINA">29.13.01.01</td><td data-label="NANDINA">2914.11.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.7. Metil Etil Cetona (MEK)</td><td data-label="Sinónimos">2-BUTANONA, MEK, ETIL METIL CETONA, 2-OXOBUTANO</td><td data-label="NABANDINA">29.13.01.02</td><td data-label="NANDINA">2914.12.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.8. Metilisobutilcetona (MIBK)</td><td data-label="Sinónimos">MIBK, 4-METIL 2-PENTANONA-ISOPROPILACETONA, HEXONA</td><td data-label="NABANDINA">29.13.01.03</td><td data-label="NANDINA">2914.13.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.9. Cloroformo (Triclorometano)</td><td data-label="Sinónimos">TRICLOROMETANO</td><td data-label="NABANDINA">29.02.01.08</td><td data-label="NANDINA">2903.13.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.10. Cloruro de Metileno (Diclorometano)</td><td data-label="Sinónimos">DICLOROMETANO, METILENO DICLORURO, BICLORURO DE METILENO</td><td data-label="NABANDINA">29.02.02.99</td><td data-label="NANDINA">2903.12.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.11. Tetracloruro de Carbono (Tetraclorometano)</td><td data-label="Sinónimos">TETRACLOROMETANO</td><td data-label="NABANDINA">29.02.01.11</td><td data-label="NANDINA">2903.14.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.12. Tricloroetileno</td><td data-label="Sinónimos">TRICLOROETENO, ETINIL TRICLORURO</td><td data-label="NABANDINA">29.02.02.02</td><td data-label="NANDINA">2903.22.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.13. Percloroetileno (Tetracloroetileno)</td><td data-label="Sinónimos">TETRACLOROETILENO</td><td data-label="NABANDINA">29.02.02.03</td><td data-label="NANDINA">2903.23.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.14. Éter Etílico (Éter Dietílico)</td><td data-label="Sinónimos">ETER SULFURICO, OXIDO DE ETILO, ETER DIETILICO, ETOXIETANO</td><td data-label="NABANDINA">29.08.01.00</td><td data-label="NANDINA">2909.11.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.15. Disulfuro de Carbono</td><td data-label="Sinónimos">CARBONO DISULFURO, ANHIDRIDO TIOCARBONICO</td><td data-label="NABANDINA">28.15.02.00</td><td data-label="NANDINA">2813.10.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.16 N-Hexano</td><td data-label="Sinónimos">NORMAL HEXANO, HIDRIDO DE CAPROILO, HIDRIDO HEXILICO</td><td data-label="NABANDINA">29.01.01.99</td><td data-label="NANDINA">2901.10.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.17. Benceno (Benzol)</td><td data-label="Sinónimos">BENZOL, CICLOHEXATRIENO, FENO</td><td data-label="NABANDINA">29.01.05.01</td><td data-label="NANDINA">2902.20.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.18. Tolueno (Toluol Metilbenceno)</td><td data-label="Sinónimos">TOLUOL, METILBENCENO, FENILMETANO</td><td data-label="NABANDINA">29.01.05.02</td><td data-label="NANDINA">2902.30.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.19. Xileno (Xilol Dimetilbenceno)</td><td data-label="Sinónimos">XILOL, DIMETILBENCENO, MEZCLAS DE ISOMEROS DEL XILENO</td><td data-label="NABANDINA">29.01.05.03</td><td data-label="NANDINA">2902.44.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.20. Alcohol Metílico (Metanol)</td><td data-label="Sinónimos">METANOL, MONIHIDROXIMETANO, METILOHIDROXIDO, ESPIRITU DE MADERA</td><td data-label="NABANDINA">29.04.01.01</td><td data-label="NANDINA">2905.11.00.00</td></tr>
+                        <tr><td data-label="Nomenclatura">4.21. Alcohol Etílico Absoluto (Etanol Absoluto)</td><td data-label="Sinónimos">ETANOL ABSOLUTO, ALCOHOL ANHIDRIDO, ETILOHIDROXIDO, ALCOHOL DE CEREALES</td><td data-label="NABANDINA">22.08.00.01</td><td data-label="NANDINA">2207.10.00.00</td></tr>
+                        <tr>
+                            <td data-label="Nomenclatura">4.22. Mezclas de Solventes (mayor al 15%)</td>
+                            <td data-label="Sinónimos">Mezcla de Solventes y/o Diluyentes de uno ó más de los productos nombrados en el numeral (4) en una proporción mayor al 15%.</td>
+                            <td data-label="NABANDINA">N/A</td>
+                            <td data-label="NANDINA">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="substance-section">
+                <h3><i class="fas fa-industry"></i> 5) SOLVENTES Y DILUYENTES INDUSTRIALES COMPUESTOS</h3>
+                <table class="substance-table">
+                    <thead>
+                        <tr>
+                            <th>Nomenclatura</th>
+                            <th>Sinónimos</th>
+                            <th>NABANDINA (N.C.C.A.B.)</th>
+                            <th>NANDINA (S.A.D.C.M.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nomenclatura">5.1. Thinners</td>
+                            <td data-label="Sinónimos">N/A</td>
+                            <td data-label="NABANDINA">38.18.00.00</td>
+                            <td data-label="NANDINA">3814.00.00.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="substance-section">
+                <h3><i class="fas fa-boxes"></i> 6) PRODUCTOS TERMINADOS</h3>
+                <table class="substance-table">
+                    <thead>
+                        <tr>
+                            <th>Nomenclatura</th>
+                            <th>Sinónimos</th>
+                            <th>NABANDINA (N.C.C.A.B.)</th>
+                            <th>NANDINA (S.A.D.C.M.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nomenclatura">6.1. Clefa</td>
+                            <td data-label="Sinónimos">N/A</td>
+                            <td data-label="NABANDINA">N/A</td>
+                            <td data-label="NANDINA">3506.91.00.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">6.2. Productos Recuperables</td>
+                            <td data-label="Sinónimos">Unicamente aquellos productos donde la recuperación de los diluyentes, solventes y soluciones comprendidos los numerales 1), 2), 3), 4) y 5) sea factible técnicamente.</td>
+                            <td data-label="NABANDINA">N/A</td>
+                            <td data-label="NANDINA">N/A</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nomenclatura">6.3. Productos NO Controlados</td>
+                            <td data-label="Sinónimos">No así, los productos terminados que contengan un soluto, el cual impida la extracción o destilación de los solventes, diluyentes y soluciones nombrados anteriormente como ser: resina plástica en general, tintas en general, pinturas, ésteres de Celulosa, grasas, siliconas, esencias hidrooleofugantes, colorantes y pigmentos, baños gráficos, etc.</td>
+                            <td data-label="NABANDINA">N/A</td>
+                            <td data-label="NANDINA">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="note-box" style="margin-top: 50px;">
+                Glosario Arancelario:
+                <br>
+                NABANDINA (N.C.C.A.B.): Nomenclatura del Consejo de Cooperación Aduanera de Bruselas.
+                <br>
+                NANDINA (S.A.D.C.M.): Sistema Armonizado de Designación y Codificación de Mercaderías.
+            </div>
+
+        </section>
+    </main>
+    
+
+
+
+
+
+
+
+
+
+
+     <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold text-primary">DGSC</h5>
+                    <p>Dirección General de Sustancias Controladas.</p>
+                    <p class="small text-muted">Comprometidos con el desarrollo y la calidad de vida de nuestros ciudadanos.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#regulaciones" class="text-white text-decoration-none">Marco Legal</a></li>
+                        <li><a href="#faq" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Mapa del Sitio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contáctenos</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Av. Control #5678, Edificio DGSC</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +591 123 4567</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> fiscalizacion@dgsc.gob</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2025 DGSC. Todos los derechos reservados. | Desarrollado con Bootstrap 5.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

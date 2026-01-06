@@ -1,0 +1,452 @@
+/* === Estilos Generales === */
+:root {
+    /* DGSC Color Palette */
+    --color-primary-dark: #002D62; /* Azul Marino Profundo */
+    --color-secondary-gold: #FFC300; /* Dorado/Amarillo de Acento */
+    --flag-red: #D42031;
+    --flag-green: #007934;
+    --color-border-subtle: #e9ecef; /* Color para bordes limpios */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* === Estilo para el Banner de Alerta Fijo === */
+.fixed-top-alert {
+    z-index: 1060; 
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    color: #030001;
+    background-color: #f1bac0;
+}
+
+/* Animación de entrada general al desplazarse */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Estilos para la Franja Tricolor === */
+.tricolor-band {
+    background: linear-gradient(to right, 
+        var(--flag-red) 0%,   /* Rojo */
+        var(--flag-red) 33.3%,
+        var(--color-secondary-gold) 33.3%, /* Dorado/Amarillo de Acento */
+        var(--color-secondary-gold) 66.6%,
+        var(--flag-green) 66.6%, /* Verde */
+        var(--flag-green) 100%
+    );
+    height: 8px; 
+    width: 100%;
+    z-index: 1050; 
+}
+
+
+/* === Estilos para la Barra de Navegación === */
+#mainNav {
+    z-index: 1040;          
+}
+
+.container-fluid {
+    background-color: #111111;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: 700;
+    
+    }
+
+.logo-3d {
+    position: relative;
+    padding-bottom: 5px;
+}
+.logo-text {
+    color: var(--bs-primary); 
+    text-shadow: 2px 2px 5px rgba(126, 163, 23, 0.5); 
+    
+}
+
+/* Dropdown en Hover (Solo Desktop) */
+@media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        /* [CORRECCIÓN CLAVE]: NO USAR display: none; - Esto anula el comportamiento del hover y el temporizador JS. */
+        /* display: none; */
+        /* En su lugar, el menú debe ocultarse por defecto por Bootstrap, y JS añade la clase 'show'. */
+        margin-top: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+        border: none;
+        animation: fadeIn 0.3s;
+        /* Aseguramos que esté posicionado correctamente */
+        position: absolute; 
+        background-color: #5e6360;
+    }
+    
+    /* [CORRECCIÓN CLAVE]: Usamos la clase 'show' para controlar la visibilidad con JS. 
+       Eliminamos la regla que forzaba el display: block al hacer hover sobre el nav-item,
+       ya que esto rompía la lógica del setTimeout. */
+    .navbar .nav-item .dropdown-menu.show {
+        display: block; /* Forzamos la visualización solo cuando JS añade la clase 'show' */
+    }
+    
+    .dropdown-toggle::after {
+        vertical-align: middle;
+        margin-left: .255em;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* === Estilos para la Sección Hero === */
+.hero-section {
+    /*background: url('https://picsum.photos/1920/1080?grayscale&blur=2') no-repeat center center;*/ 
+    background-size: cover;
+    height: 55vh; 
+    background-attachment: fixed; 
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(92, 88, 88, 0.6);
+}
+
+.hero-section .container {
+    z-index: 2; 
+    position: relative;
+}
+
+.text-shadow-lg {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Animaciones de entrada del Hero */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate-fade-in-up {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+
+/* === UNIFORM CARD STYLING BASE (Marco Legal, Avisos, Misión/Visión, Videos, Contacto) === */
+.uniform-card-base {
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 45, 98, 0.08); /* Sombra sutil del color primario */
+    position: relative;
+    height: 100%;
+}
+
+.uniform-card-base:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 45, 98, 0.15);
+}
+
+/* Accent Bar styles (Used by Law, Mision/Vision, Avisos) */
+.card-accent-bar {
+    width: 6px; 
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.card-accent-bar.bg-primary { 
+    background-color: var(--color-primary-dark);
+}
+.card-accent-bar.bg-secondary { 
+    background-color: var(--color-secondary-gold);
+}
+.card-accent-bar.bg-info { 
+    background-color: var(--bs-info);
+}
+
+/* === 1. Marco Legal (.law-card) === */
+.law-card {
+    /* Inherits uniform-card-base styles */
+}
+.law-card .card-body {
+    padding-left: 30px; /* Space for the accent bar */
+    position: relative;
+}
+/* RESTAURADO: Texto Dorado al hacer hover */
+.law-card .btn-outline-primary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-gold); 
+    border-color: var(--color-primary-dark);
+}
+.law-card .btn-outline-secondary:hover {
+    background-color: var(--color-secondary-gold);
+    color: var(--color-primary-dark);
+    border-color: var(--color-secondary-gold);
+}
+
+/* === 2. Misión y Visión (.mission-vision-card) === */
+.mission-vision-card .card-body {
+    padding-left: 30px; 
+    position: relative;
+}
+
+/* === 3. Avisos (.announcement-card) === */
+.announcement-card .card-body {
+    position: relative;
+}
+.announcement-card .card-header {
+    background-color: #fff !important; /* Force header to match card body */
+    padding-left: 30px; /* Space for the accent bar */
+}
+
+/* === 4. Trámites (.card-flip) - MEJORAS EJECUTIVAS === */
+.card-container {
+    perspective: 1000px; 
+    height: 300px; 
+}
+.card-flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s; 
+    transform-style: preserve-3d; 
+    cursor: pointer;
+}
+.card-flip:hover, .card-flip.flipped { 
+    transform: rotateY(180deg);
+}
+
+/* Executive Front Style: White with Gold Accent */
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 10px; 
+    
+    border: 2px solid var(--color-border-subtle); 
+    border-bottom: 5px solid var(--color-secondary-gold); /* Gold bottom accent */
+    background-color: #fff !important; 
+    color: #333 !important; 
+    box-shadow: 0 5px 15px rgba(0, 45, 98, 0.08);
+    
+    transition: all 0.4s ease;
+}
+
+.card-flip:hover .card-front {
+    box-shadow: 0 10px 25px rgba(0, 45, 98, 0.15); 
+}
+
+/* Executive Back Style: Dark Blue with Gold Highlights */
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 10px; 
+
+    transform: rotateY(180deg);
+    background-color: var(--color-primary-dark) !important; /* Dark Blue */
+    color: white !important; 
+    border: 2px solid var(--color-primary-dark);
+    box-shadow: 0 10px 25px rgba(0, 45, 98, 0.25); /* Stronger shadow on the back */
+    
+    transition: all 0.4s ease;
+}
+
+/* Styling elements inside the dark back card */
+.card-back .card-title {
+    color: var(--color-secondary-gold) !important; /* Gold titles on the back */
+}
+.card-back .list-unstyled i {
+    color: var(--color-secondary-gold) !important; /* Gold checkmarks */
+}
+.card-back .btn {
+    font-weight: bold;
+}
+.card-back .btn-outline-primary,
+.card-back .btn-outline-secondary,
+.card-back .btn-outline-info {
+    color: var(--color-secondary-gold) !important;
+    border-color: var(--color-secondary-gold) !important;
+    background-color: transparent !important;
+}
+.card-back .btn-outline-primary:hover,
+.card-back .btn-outline-secondary:hover,
+.card-back .btn-outline-info:hover {
+    background-color: var(--color-secondary-gold) !important;
+    color: var(--color-primary-dark) !important;
+    border-color: var(--color-secondary-gold) !important;
+}
+
+
+/* Ensure colors are applied to text/icons in white cards (Front only) */
+.card-front .text-primary { color: var(--color-primary-dark) !important; }
+.card-front .text-secondary { color: var(--color-secondary-gold) !important; }
+.card-front .text-info { color: var(--bs-info) !important; }
+
+.flip-hint {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    font-size: 0.8rem;
+    color: rgba(51, 51, 51, 0.7); 
+    transition: opacity 0.3s;
+}
+.card-flip:hover .flip-hint, .card-flip.flipped .flip-hint {
+    opacity: 0;
+}
+
+/* === Estilos para FAQ (Acordeón) - MEJORADOS con Dorado === */
+.accordion-item {
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 45, 98, 0.05);
+}
+.accordion-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 45, 98, 0.1);
+}
+
+.accordion-button {
+    font-size: 1.1rem;
+    padding: 1rem 1.25rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estado Activo: resalta con el color Primario y un borde Dorado */
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-primary-dark); /* Fondo azul oscuro */
+    color: var(--color-secondary-gold); /* Texto dorado */
+    border-bottom: 3px solid var(--color-secondary-gold); /* Borde dorado */
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+/* Borde de acento sutil con el color primario al costado de preguntas cerradas */
+.accordion-button.collapsed::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--color-primary-dark);
+    border-radius: 8px 0 0 8px;
+    transition: all 0.3s ease;
+}
+.accordion-button:not(.collapsed)::before {
+    background-color: var(--color-secondary-gold); /* Dorado en estado abierto */
+}
+
+/* Ajuste del icono de colapsado/abierto */
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(1.5) invert(1); /* Hace que el icono se vea más claro sobre el fondo oscuro */
+}
+
+
+/* === Estilos para Contacto y Consultas (.contact-card) - MEJORADOS con Dorado === */
+.contact-card .form-control,
+.contact-card .form-select {
+    border-radius: 8px;
+    border-color: var(--color-border-subtle);
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-card .form-control:focus,
+.contact-card .form-select:focus {
+    border-color: var(--color-secondary-gold); /* Borde en foco dorado */
+    box-shadow: 0 0 0 0.25rem rgba(255, 195, 0, 0.35); /* Sombra en foco dorado semi-transparente más visible */
+}
+
+/* Estilo del Botón de Enviar (Moderno) */
+.contact-card .btn-primary {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.contact-card .btn-primary:hover {
+    background-color: var(--color-secondary-gold); /* Fondo Dorado al hacer hover */
+    border-color: var(--color-secondary-gold);
+    color: var(--color-primary-dark) !important; /* Texto Azul oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 195, 0, 0.4);
+}
+
+
+/* Estilos para el Botón Flotante de WhatsApp (Denuncia) - SIN CAMBIOS */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #25D366; 
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    width: 200px; 
+    border-radius: 30px;
+}
+/* ... (El resto de estilos de WhatsApp, Estadísticas se mantienen) ... */
+.statistic-box {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.statistic-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--color-secondary-gold); 
+}
+
+.statistic-box h3 {
+    color: white; 
+}
